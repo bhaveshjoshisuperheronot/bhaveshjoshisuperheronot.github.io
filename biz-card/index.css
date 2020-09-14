@@ -64,6 +64,12 @@ body {
     border-radius: 5px;
     box-shadow: 0 1px 12px 0 rgba(0,0,0,.18);
     padding: 30px;
+    height: 430px;
+    overflow: hidden;
+    background: -webkit-linear-gradient(70deg, #fff810 30%, rgba(0,0,0,0) 30%), -webkit-linear-gradient(30deg, #63e89e 60%, #ff7ee3 60%);
+    background: -o-linear-gradient(70deg, #fff810 30%, rgba(0,0,0,0) 30%), -o-linear-gradient(30deg, #63e89e 60%, #ff7ee3 60%);
+    background: -moz-linear-gradient(70deg, #fff810 30%, rgba(0,0,0,0) 30%), -moz-linear-gradient(30deg, #63e89e 60%, #ff7ee3 60%);
+    background: linear-gradient(70deg, #fff810 30%, rgba(0,0,0,0) 30%), linear-gradient(30deg, #63e89e 60%, #ff7ee3 60%);
 }
 .center {
     text-align: center;
@@ -77,11 +83,40 @@ p.center {
     font-size: 18px;
     margin: 0 0 40px;
 }
+.step-form-2 p.center{
+    margin: 0 0 30px;
+}
 .step-form {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    clear: both;
+    transition: 0.3s all;
+    left: 150px;
+    width: 340px;
+    background: rgba(255,255,255,0.9);
+    padding: 10px 5px 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    right: auto;
+    transform: rotateY(180deg);
     display: none;
 }
 .step-form.active{
-    display:block;
+    display: block;
+    opacity: 1;
+    z-index: 1;
+    left: 30px;
+    right: auto;
+    transform: rotateY(0deg);
+    display: block;
+}
+.step-form.right{
+    left: auto;
+    opacity: 0;
+    z-index: -1;
+    right: 490px;
+    transform: rotateY(180deg)
 }
 
 /*Form CSS*/
@@ -100,6 +135,13 @@ p.center {
     position: relative;
     padding: 0 10px;
 }
+.step-form-3 .input--field-box {
+    padding: 0;
+    width: calc(50% - 18px);
+    display: inline-block;
+    margin: 0px 7px 0 7px;
+}
+
 .input--field, .iti input[type=tel].input--field {
     outline: none;
     width: 100%;
@@ -111,6 +153,7 @@ p.center {
     margin: 0 0 25px!important;
     transition: 0.3s all;
     font-family: sans-serif;
+    background: transparent
 }
 textarea.input--field {
     height: 80px!important;
@@ -138,23 +181,43 @@ div .iti__selected-flag{
     color: #cecece;
     font-size: 16px;
 }
+.step-form-3 .input--field::-webkit-input-placeholder { /* Edge */
+    font-size: 12px;
+}
+.step-form-3 .input--field:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-size: 12px;
+}
+.step-form-3 .input--field::placeholder {
+    font-size: 12px;
+}
 .input--field-box label {
     position: absolute;
     left: 12px;
     top: 10px;
     transition: 0.3s all;
 }
+.step-form-3 .input--field-box label {
+    font-size: 14px;
+    left: 0;
+}
 .iti + label{left: 60px;}
 .input--field:focus + label, .focused label {
     top: -10px;
-    left: 12px;
+    left: 10px;
     font-size: 11px;
+    color: #00b285;
+}
+.step-form-3 .input--field:focus + label, .step-form-3 .focused label {
+    color: #00b285;
+    left: 0;
 }
 html label.input--field {
     position: static;
     display: block;
+    margin: 0 0 10px!important;
+    overflow: hidden;
 }
-.input--field:focus {border-bottom: 2px solid #000;}
+.input--field:focus {border-bottom: 2px solid #00b285;}
 .input--field:focus::-webkit-input-placeholder {
     opacity: 1;
 }
@@ -171,10 +234,13 @@ html label.input--field {
     background: rgba(0,0,0, 0.4);
     color: #fff;
     text-decoration: none;
-    margin: 25px 0 0 0;
+    margin: 300px 0 0 0;
     outline: none;
     border: none;
     cursor: pointer;
+}
+#confirmPosition {
+    margin: 30px 0 0;
 }
 .close-icon {
     position: absolute;
@@ -187,7 +253,7 @@ html label.input--field {
 }
 .nav-btn.inactive {display: none;}
 .nav-btn-prev:hover, .nav-btn-next:hover {
-    background: rgba(0,0,0, 1);
+    background: #000;
 }
 .nav-btn-prev {float: left;}
 .nav-btn-next {float: right;}
@@ -209,6 +275,7 @@ html label.input--field {
 }
 .upload-img-container input, .upload-img-container label, .upload-img-container img {
     display: block;
+    margin: 0 15px;
 }
 .upload-img-container img {
     height: 50px;
@@ -324,97 +391,122 @@ html label.input--field {
 /*Card CSS Starts*/
 .container.mainCard {
     padding: 0;
-    height: 95vh;
+    height: 480px;
+    width: 320px;
     overflow: hidden;
+    background: -webkit-linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), -webkit-radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%);
+    background: -o-linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), -o-radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%);
+    background: -moz-linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), -moz-radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%);
+    background: linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%);
 }
 .step-form-5 {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+    position: static;
+    padding: 0;
+    display: none;
+    background: transparent;
 }
 .mainCard-parent {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    background-image: url(https://freedesignfile.com/upload/2016/11/Light-blue-wavy-abstract-background-vector-01.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top left;
-}
-.mainCard-cover {
-    width: 100%;
-    height: 200px;
-    background-size: contain;
-    background-repeat: no-repeat;
     background-position: center;
-    border-bottom: 5px solid #073E58;
-    background-color: #fff;
 }
 .mainCard-profile {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: -70px auto 0;
-    border-radius: 50%;
-    border: 5px solid #073E58;
-    background-color: #fff;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    z-index: -1;
 }
-.mainCard-name div {
-    margin: 10px 0 5px;
+.mainCard-cover {
+    width: 80px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 5px;
+}
+.mainCard-name {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+}
+.mainCard-name .name {
     font-size: 24px;
     font-weight: 600;
     line-height: 1.48;
     letter-spacing: -1px;
     display: inline-block;
-    background: #073E58;
-    padding: 4px;
+    padding: 10px 0 5px 0;
     border-radius: 3px;
     color: #fff;
     text-transform: capitalize;
 }
-.mainCard-post div {
+.mainCard-post {
+    display: block;
+}
+.mainCard-post .post {
     font-size: 16px;
     line-height: 1.48;
     letter-spacing: 0px;
     text-transform: capitalize;
     display: inline-block;
-    background: #073E58;
-    padding: 4px;
+    padding: 0 0 10px 0;
     border-radius: 3px;
     color: #fff;
+    font-weight: 300;
 }
 .mainCard-connections {
-    width: 100%;
-    margin: 30px auto 0;
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    width: auto;
+    top: 45%;
+    left: 35px;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
 }
 .mainCard-contacts, .mainCard-social {
-    display: flex;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center;
+    display: block;
 }
 .mainCard-contacts a.fa, .mainCard-social a.fa {
-    font-size: 48px;
+    font-size: 22px;
     text-decoration: none;
-    color: #073E58;
-    margin: 10px 15px;
+    color: #fff;
+    margin: 15px 15px;
+    display: block;
 }
 .location-marker {
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none;
-    color: #073E58;
+    color: #fff;
     margin: 0px -20px 0 10px;
+    display: inline-block;
 }
 .mainCard .nav-btn-prev{
     position: absolute;
-    top: -10px;
-    right: 10px;
+    top: 10px;
+    left: 10px;
+    margin: 0;
+    font-size: 10px;
 }
 /*Card CSS Ends*/
 /*Main CSS Ends*/
@@ -422,6 +514,12 @@ html label.input--field {
 /*Responsive CSS*/
 @media screen and (max-width: 767px){
     .container {width: 95vw; padding: 30px 20px;}
+    .step-form {
+        width: calc(100vw - 45px - 10vw);
+    }
+    .step-form-5 {
+        width: 100%;
+    }
     h2.center {font-size: 22px;}
     .input--field, .iti input[type=tel].input--field {font-size: 16px;}
     #map {width: 80vw;}
@@ -430,6 +528,16 @@ html label.input--field {
         height: 100vh;
         overflow: hidden;
         width: 100vw;
+    }
+    .step-form-3 .input--field-box label {
+        font-size: 12px;
+    }
+    .step-form-3 .input--field:focus + label, .step-form-3 .focused label, .input--field:focus + label, .focused label {
+        font-size: 11px;
+    }
+    .container.mainCard {
+        height: 480px;
+        width: 320px;
     }
 }
 /*Responsive CSS ends*/

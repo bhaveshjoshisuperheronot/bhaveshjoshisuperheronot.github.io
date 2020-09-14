@@ -89,15 +89,15 @@
         <div class="step-form step-form-4">
             <p class="center">4. Photos</p>
             <div class="upload-img-container upload-img-container-1 req"><input class="input--field req" type="file"  accept="image/*" name="image" id="file1"  onchange="loadFile1(event)" style="display: none;"><label for="file1" style="cursor: pointer;">Upload Profile Image<span class="class-required">*</span></label><img id="output1" class="upload-img upload-img-1"/></div>
-            <div class="upload-img-container upload-img-container-2 req"><input class="input--field req" type="file"  accept="image/*" name="image" id="file2"  onchange="loadFile2(event)" style="display: none;"><label for="file2" style="cursor: pointer;">Upload Cover Image<span class="class-required">*</span></label><img id="output2" class="upload-img upload-img-2" /></div>
+            <div class="upload-img-container upload-img-container-2 req"><input class="input--field req" type="file"  accept="image/*" name="image" id="file2"  onchange="loadFile2(event)" style="display: none;"><label for="file2" style="cursor: pointer;">Upload Logo<span class="class-required">*</span></label><img id="output2" class="upload-img upload-img-2" /></div>
             <!-- <div class="upload-img-container upload-img-container-3"><input class="input--field" type="file"  accept="image/*" name="image" id="file3"  onchange="loadFile3(event)" style="display: none;"><label for="file3" style="cursor: pointer;">Upload Your Logo</label><img id="output3" class="upload-img upload-img-3" /></div> -->
         </div>
         <div class="step-form step-form-5">
             <div class="mainCard-parent">
-                <div class="mainCard-cover"></div>
+                <a class="mainCard-cover"></a>
                 <div class="mainCard-profile"></div>
-                <div class="mainCard-name center"><div></div></div>
-                <div class="mainCard-post center"><div></div><a href="" target="_blank" class="location-marker fa fa-map-marker"></a></div>
+                <div class="mainCard-name center"><div class="name"></div><div class="mainCard-post center"><div class="post"></div><a href="" target="_blank" class="location-marker fa fa-map-marker"></a></div></div>
+                
                 <div class="mainCard-connections center">
                     <div class="mainCard-contacts">
                         <a class="fa fa-phone" href=""></a>
@@ -109,7 +109,7 @@
                         <a target="_blank" class="fa fa-twitter" href=""></a>
                         <a target="_blank" class="fa fa-instagram" href=""></a>
                         <a target="_blank" class="fa fa-linkedin" href=""></a>
-                        <a target="_blank" class="fa fa-globe" href=""></a>
+                        <!-- <a target="_blank" class="fa fa-globe" href=""></a> -->
                     </div>
                 </div>
             </div>
@@ -198,7 +198,8 @@
                     
                     if(count != 5){
                         jQuery('.step-form').removeClass('active');
-                        jQuery('.step-form-'+count).addClass('active');
+                        if(jQuery(this).hasClass('nav-btn-next')){jQuery('.step-form-'+(count-1)).addClass('right');jQuery('.step-form-'+count).addClass('active');}
+                        else if(jQuery(this).hasClass('nav-btn-prev')){jQuery('.step-form-'+count).addClass('active');jQuery('.step-form-'+count).removeClass('right');}   
                         if(count == 4){
                             jQuery('.container').removeClass('mainCard');
                             jQuery('.nav-btn-prev').text('Previous');
@@ -206,8 +207,8 @@
                     }else{
                         jQuery('.loader-parent-main').show();
                         jQuery('.nav-btn-prev').text('Go to Editor');
-                        jQuery('.mainCard-name div').html(jQuery('#full-name').val())
-                        jQuery('.mainCard-post div').html(jQuery('#job-desc').val()+', '+jQuery('#company-name').val())
+                        jQuery('.mainCard-name .name').html(jQuery('#full-name').val())
+                        jQuery('.mainCard-post .post').html(jQuery('#job-desc').val()+', '+jQuery('#company-name').val())
                         jQuery('.mainCard-profile').css('background-image', 'url('+jQuery('#output1').attr('src')+')');
                         jQuery('.mainCard-cover').css('background-image', 'url('+jQuery('#output2').attr('src')+')');
                         jQuery('.mainCard-contacts a:nth-child(1)').attr('href', 'tel:'+(jQuery("#tel-num").intlTelInput("getSelectedCountryData").dialCode+jQuery('#tel-num').val().toString()))
@@ -242,10 +243,9 @@
                             jQuery('.mainCard-social a:nth-child(4)').hide();
                         } 
                         if(jQuery('#website-url').val() != ''){
-                            jQuery('.mainCard-social a:nth-child(5)').show();
-                            jQuery('.mainCard-social a:nth-child(5)').attr('href', jQuery('#website-url').val())
+                            jQuery('.mainCard-cover').attr('href', jQuery('#website-url').val())                            
                         }else{
-                            jQuery('.mainCard-social a:nth-child(5)').hide();
+                            jQuery('.mainCard-social a:nth-child(5)').attr('href', "#")
                         }
                         if(jQuery('#addressName').val() != ''){
                             jQuery('.location-marker').show();
