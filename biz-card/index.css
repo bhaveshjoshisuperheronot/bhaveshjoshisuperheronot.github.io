@@ -447,7 +447,7 @@ html label.input--field {
     width: 100%;
     left: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,1);
 }
 .mainCard-name .name {
     font-size: 24px;
