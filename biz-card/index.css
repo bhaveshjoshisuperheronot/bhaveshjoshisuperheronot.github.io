@@ -91,7 +91,7 @@ p.center {
     opacity: 0;
     z-index: -1;
     clear: both;
-    transition: 0.3s all;
+    transition: 0.5s all;
     left: 150px;
     width: 340px;
     background: rgba(255,255,255,0.9);
@@ -100,10 +100,10 @@ p.center {
     box-sizing: border-box;
     right: auto;
     transform: rotateY(180deg);
-    display: none;
+    /* display: none; */
 }
 .step-form.active{
-    display: block;
+    /* display: block; */
     opacity: 1;
     z-index: 1;
     left: 30px;
