@@ -1,104 +1,339 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Newsletter Management</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <script type="text/javascript"
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5Jrp9PtHe0WapppUzxbIpMDWMAcV3qE4"></script>
+    <script src="https://unpkg.com/location-picker/dist/location-picker.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../biz-card/intl-tel-input-master/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-    <div class="main-parent">
-        <div class="main-content">
-            <!-- sidebar will be fixed  -->
-            <div class="sidebar">
-                <div class="main-logo">
-                    <a href="#"><img src="./images/main-logo.png" /></a>
-                </div>
-                <ul class="menu">
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Create New</a></li>
-                    <li><a href="#" class="active">Templates</a></li>
-                    <li><a href="#">Emailed</a></li>
-                    <li><a href="#">Scheduled</a></li>
-                    <li><a href="#">Feedbacks</a></li>
-                </ul>
-            </div>
-            <div class="content-menu">
-                <div class="dateTime">
-                    <span class="date">March 23, 2020</span>
-                    <span class="time">15:33</span>
-                </div>
-                <div class="profile">
-                    <div class="profile-name">
-                        Welcome, User<i class="fa fa-chevron-down"></i>
-                        <div class="profile-menu-parent">
-                            <ul class="profile-menu">
-                                <li><a href="#">Account Settings</a></li>
-                                <li><a href="#">Change Password</a></li>
-                                <li><a href="#">Logout</a></li>
-                            </ul>
-                        </div>
-                    </div>                    
-                </div>
-            </div>
-            <!-- content page will be variable -->
-            <div class="content">
-                <h2 class="page-title">Templates</h2>
-                <label class="newsletter-label">Newsletter :</label>
-                <select class="newsletter-options">
-                    <option>Newsletter 1</option>
-                    <option>Newsletter 2</option>
-                    <option>Newsletter 3</option>
-                    <option>Newsletter 4</option>
-                </select>
-                <div class="section-title">Template list</div>
-                <div class="newsletter-templates-slider">
-                    <div class="newsletter-templates-slider-button newsletter-templates-slider-button-prev"><i class="fa fa-chevron-left"></i></div>
-                    <div class="newsletter-templates-slider-button newsletter-templates-slider-button-next"><i class="fa fa-chevron-right"></i></div>
-                    <div class="newsletter-templates-all">
-                        <div class="newsletter-template newsletter-template-1"><div class="text">Template 1</div></div>
-                        <div class="newsletter-template newsletter-template-2"><div class="text">Template 2</div></div>
-                        <div class="newsletter-template newsletter-template-3"><div class="text">Template 3</div></div>
-                        <div class="newsletter-template newsletter-template-4"><div class="text">Template 4</div></div>
-                        <div class="newsletter-template newsletter-template-5 active"><div class="text">Template 5</div></div>
-                        <div class="newsletter-template newsletter-template-6"><div class="text">Template 6</div></div>
-                        <div class="newsletter-template newsletter-template-7"><div class="text">Template 7</div></div>
-                        <div class="newsletter-template newsletter-template-8"><div class="text">Template 8</div></div>
-                        <div class="newsletter-template newsletter-template-9"><div class="text">Template 9</div></div>
-                        <div class="newsletter-template newsletter-template-10"><div class="text">Template 10</div></div>
-                        <div class="newsletter-template newsletter-template-11"><div class="text">Template 11</div></div>
-                        <div class="newsletter-template newsletter-template-12"><div class="text">Template 12</div></div>
-                    </div>
-                </div>
-                <div class="section-title">Newsletter Preview</div>
-                <div class="newsletter-preview">
-                    <div class="newsletter-parent">
-                        <div class="newsletter-logo"><img src="./images/sample-company-logo.png"/></div>
-                        <div class="newsletter-header">Demo Newsletter 1</div>
-                        <div class="newsletter-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
-                        <div class="newsletter-img"><img src="./images/news-letter-banner-1.jpg"/></div>
-                        <div class="newsletter-text">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</div>
-                        <div class="newsletter-button"><a href="#">Get Started</a></div>
-                        <div class="newsletter-img"><img src="./images/news-letter-banner-2.jpg"/></div>
-                        <div class="newsletter-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
-                        <div class="newsletter-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </div>
-                        <div class="newsletter-button"><a href="#">Shop Now</a></div>
-                        <div class="newsletter-footer"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer">
-            <ul class="footer-menu">
-                <li>All Rights Reserved. Copyright 2020.</li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Contact us</a></li>
-            </ul>
+    <div class="loader-parent-main">
+        <div class="loader-parent">
+            <div class=loader></div>
         </div>
     </div>
-</body>
+    <div class="map-parent-main" id="mapMain">
+        <div class="map-parent">
+            <i class="close-icon fa fa-times-circle"></i>
+            <div id="map"></div>
+            <button id="confirmPosition">Confirm Position</button>
+            <p style="display: none;">On idle position: <span id="onIdlePositionView"></span></p>
+            <p style="display: none;">On click position: <span id="onClickPositionView"></span></p>
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="center">Enter Details for the Biz Card</h2>
+        <div class="step-form step-form-1 active">
+            <p class="center">1. Personal Information</p>
+            <div class="input--field-box">
+                <input type="text" id="full-name" class="full-name input--field req" placeholder="Bhavesh Joshi">
+                <label for="full-name">Full Name<span class="class-required">*</span></label>
+            </div>
+            <div class="input--field-box">
+                <input type="text" id="job-desc" class="job-desc input--field req" placeholder="CEO/Front End Developer">
+                <label for="job-desc">Post/Job Description<span class="class-required">*</span></label>
+            </div>
+            <div class="input--field-box">
+                <input type="text" id="company-name" class="company-name input--field req" placeholder="Google Inc">
+                <label for="company-name">Company Name<span class="class-required">*</span></label>
+            </div>
+        </div>
+        <div class="step-form step-form-2">
+            <p class="center">2. Contact Information</p>
+            <div class="input--field-box">
+                <input type="tel" id="tel-num" class="tel-num input--field req" placeholder="7303076739" maxlength="20">
+                <label for="tel-num">Mobile Number<span class="class-required">*</span></label>
+            </div>
+            <div class="input--field-box">
+                <input type="email" id="email-id" class="email-id input--field req" placeholder="bhaveshjoshi011@gmail.com">
+                <label for="email-id">Email ID<span class="class-required">*</span></label>
+            </div>
+            <div class="input--field-box">
+                <input type="tel" id="whatsapp-num" class="whatsapp-num input--field" placeholder="7303076739" maxlength="20">
+                <label for="whatsapp-num">Whatsapp Number</label>
+            </div>
+            <div class="input--field-box">
+                <input type="text" id="longiName" style="display: none;"/>
+                <input type="text" id="latiName" style="display: none;"/>
+                <label class="input--field" id="addressName" for="address-name">Select your Address</label>
+            </div>
+        </div>
+        <div class="step-form step-form-3">
+            <p class="center">3. Social Links</p>
+            <div class="input--field-box">
+                <input type="url" id="fb-url" class="fb-url input--field" placeholder="https://www.facebook.com/xyz">
+                <label for="fb-url">Facebook Profile URL</label>
+            </div>
+            <div class="input--field-box">
+                <input type="url" id="twitter-url" class="twitter-url input--field" placeholder="https://www.twitter.com/xyz">
+                <label for="twitter-url">Twitter Profile URL</label>
+            </div>
+            <div class="input--field-box">
+                <input type="url" id="instagram-url" class="instagram-url input--field" placeholder="https://www.instagram.com/xyz">
+                <label for="instagram-url">Instagram Profile URL</label>
+            </div>
+            <div class="input--field-box">
+                <input type="url" id="linked-url" class="linked-url input--field" placeholder="https://www.linkedin.com/xyz">
+                <label for="linked-url">Linked In Profile URL</label>
+            </div>
+            <div class="input--field-box">
+                <input type="url" id="website-url" class="website-url input--field" placeholder="https://www.xyz.com/">
+                <label for="website-url">Website In Profile URL</label>
+            </div>
+        </div>
+        <div class="step-form step-form-4">
+            <p class="center">4. Photos</p>
+            <div class="upload-img-container upload-img-container-1 req"><input class="input--field req" type="file"  accept="image/*" name="image" id="file1"  onchange="loadFile1(event)" style="display: none;"><label for="file1" style="cursor: pointer;">Upload Profile Image<span class="class-required">*</span></label><img id="output1" class="upload-img upload-img-1"/></div>
+            <div class="upload-img-container upload-img-container-2 req"><input class="input--field req" type="file"  accept="image/*" name="image" id="file2"  onchange="loadFile2(event)" style="display: none;"><label for="file2" style="cursor: pointer;">Upload Logo<span class="class-required">*</span></label><img id="output2" class="upload-img upload-img-2" /></div>
+            <!-- <div class="upload-img-container upload-img-container-3"><input class="input--field" type="file"  accept="image/*" name="image" id="file3"  onchange="loadFile3(event)" style="display: none;"><label for="file3" style="cursor: pointer;">Upload Your Logo</label><img id="output3" class="upload-img upload-img-3" /></div> -->
+        </div>
+        <div class="step-form step-form-5">
+            <div class="mainCard-parent">
+                <a class="mainCard-cover"></a>
+                <div class="mainCard-profile"></div>
+                <div class="mainCard-name center"><div class="name"></div><div class="mainCard-post center"><div class="post"></div><a href="" target="_blank" class="location-marker fa fa-map-marker"></a></div></div>
+                
+                <div class="mainCard-connections center">
+                    <div class="mainCard-contacts">
+                        <a class="fa fa-phone" href=""></a>
+                        <a class="fa fa-envelope" href=""></a>
+                        <a target="_blank" class="fa fa-whatsapp" href=""></a>
+                    </div>
+                    <div class="mainCard-social">
+                        <a target="_blank" class="fa fa-facebook" href=""></a>
+                        <a target="_blank" class="fa fa-twitter" href=""></a>
+                        <a target="_blank" class="fa fa-instagram" href=""></a>
+                        <a target="_blank" class="fa fa-linkedin" href=""></a>
+                        <!-- <a target="_blank" class="fa fa-globe" href=""></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="nav-btn nav-btn-prev inactive" href="javascript:void(0);">Previous</a>
+        <a class="nav-btn nav-btn-next" href="javascript:void(0);">Next</a>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Use as a jQuery plugin -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../biz-card/intl-tel-input-master/build/js/intlTelInput-jquery.min.js"></script> 
+    <script>
+        var loadFile1 = function(event) {
+	        var image = document.getElementById('output1');
+	        if((event.target.files[0]) == undefined){
+                image.src = '';
+                var node = document.createElement("span");
+                node.classList.add("error-box");
+                var textnode = document.createTextNode("It is a mandatory field");
+                node.appendChild(textnode);
+                document.getElementById("file1").parentNode.appendChild(node);
+            }
+	        else{image.src = URL.createObjectURL(event.target.files[0]);}
+        };
+        var loadFile2 = function(event) {
+	        var image = document.getElementById('output2');
+            if((event.target.files[0]) == undefined){
+                image.src = '';
+                var node = document.createElement("span");
+                node.classList.add("error-box");
+                var textnode = document.createTextNode("It is a mandatory field");
+                node.appendChild(textnode);
+                document.getElementById("file2").parentNode.appendChild(node); 
+            }
+	        else{image.src = URL.createObjectURL(event.target.files[0]);}
+        };
+        // var loadFile3 = function(event) {
+	    //     var image = document.getElementById('output3');
+        //     if((event.target.files[0]) == undefined){
+        //         image.src = '';
+        //     }
+	    //     else{image.src = URL.createObjectURL(event.target.files[0]);}
+        // };
+    </script>
+    <script>
+        var count = 1;
+        jQuery(document).ready(function(){
+            jQuery("#whatsapp-num, #tel-num").intlTelInput({
+                // options here
+            });
+            jQuery('#addressName').on('click', function(){
+                jQuery('.map-parent-main').fadeIn();
+            })
+            jQuery('.close-icon').on('click', function(){
+                jQuery('.map-parent-main').fadeOut();
+            })
+            jQuery('.nav-btn').on('click', function(){
+                var fieldCount = 0;
+                jQuery('.step-form.active .input--field.req').each(function(){
+                    if(jQuery(this).val() != ''){
+                        fieldCount++
+                    }else{
+                        jQuery(this).parents('.input--field-box').children('.error-box').remove();
+                        jQuery(this).parents('.input--field-box').append('<span class="error-box">It is a mandatory field.</span>');
+                    }
+                })
+                if(jQuery(this).hasClass('nav-btn-next')){
+                    jQuery('.step-form.active .upload-img-container.req input').each(function(){
+                        if(jQuery(this).val() == ''){
+                            jQuery(this).parents('.upload-img-container').children('.error-box').remove();
+                            jQuery(this).parents('.upload-img-container').append('<span class="error-box">It is a mandatory field.</span>');
+                        }else{
+                            jQuery(this).parents('.upload-img-container').children('.error-box').remove();
+                        }
+                    })
+                }
+                if((jQuery(this).hasClass('nav-btn-prev')) || jQuery('.step-form.active .error-box').length < 1){
+                    jQuery('.nav-btn').removeClass('inactive');
+                    if(jQuery(this).hasClass('nav-btn-next')){
+                        count++;
+                        if(count == 5) {jQuery(this).addClass('inactive')}
+                    }else{
+                        count--;
+                        if(count == 1) {jQuery(this).addClass('inactive')}
+                    }
+                    
+                    if(count != 5){
+                        jQuery('.step-form').removeClass('active');
+                        if(jQuery(this).hasClass('nav-btn-next')){jQuery('.step-form-'+(count-1)).addClass('right');jQuery('.step-form-'+count).addClass('active');}
+                        else if(jQuery(this).hasClass('nav-btn-prev')){jQuery('.step-form-'+count).addClass('active');jQuery('.step-form-'+count).removeClass('right');}   
+                        if(count == 4){
+                            jQuery('.container').removeClass('mainCard');
+                            jQuery('.nav-btn-prev').text('Previous');
+                            jQuery('.container h2.center').show();
+                        }
+                    }else{
+                        jQuery('.loader-parent-main').show();
+                        jQuery('.nav-btn-prev').text('Go to Editor');
+                        jQuery('.mainCard-name .name').html(jQuery('#full-name').val())
+                        jQuery('.mainCard-post .post').html(jQuery('#job-desc').val()+', '+jQuery('#company-name').val())
+                        jQuery('.mainCard-profile').css('background-image', 'url('+jQuery('#output1').attr('src')+')');
+                        jQuery('.mainCard-cover').css('background-image', 'url('+jQuery('#output2').attr('src')+')');
+                        jQuery('.mainCard-contacts a:nth-child(1)').attr('href', 'tel:'+(jQuery("#tel-num").intlTelInput("getSelectedCountryData").dialCode+jQuery('#tel-num').val().toString()))
+                        jQuery('.mainCard-contacts a:nth-child(2)').attr('href', 'mailTo:'+jQuery('#email-id').val())
+                        if(jQuery('#whatsapp-num').val().toString() != ''){
+                            jQuery('.mainCard-contacts a:nth-child(3)').attr('href', 'https://wa.me/'+(jQuery("#whatsapp-num").intlTelInput("getSelectedCountryData").dialCode+jQuery('#whatsapp-num').val().toString()))
+                        }else{
+                            jQuery('.mainCard-contacts a:nth-child(3)').hide();
+                        }
+                        if(jQuery('#fb-url').val() != ''){
+                            jQuery('.mainCard-social a:nth-child(1)').show();
+                            jQuery('.mainCard-social a:nth-child(1)').attr('href', jQuery('#fb-url').val())
+                        }else{
+                            jQuery('.mainCard-social a:nth-child(1)').hide();
+                        }
+                        if(jQuery('#twitter-url').val() != ''){
+                            jQuery('.mainCard-social a:nth-child(2)').show();
+                            jQuery('.mainCard-social a:nth-child(2)').attr('href', jQuery('#twitter-url').val())
+                        }else{
+                            jQuery('.mainCard-social a:nth-child(2)').hide();
+                        } 
+                        if(jQuery('#instagram-url').val() != ''){
+                            jQuery('.mainCard-social a:nth-child(3)').show();
+                            jQuery('.mainCard-social a:nth-child(3)').attr('href', jQuery('#instagram-url').val())
+                        }else{
+                            jQuery('.mainCard-social a:nth-child(3)').hide();
+                        } 
+                        if(jQuery('#linked-url').val() != ''){
+                            jQuery('.mainCard-social a:nth-child(4)').show();
+                            jQuery('.mainCard-social a:nth-child(4)').attr('href', jQuery('#linked-url').val())
+                        }else{
+                            jQuery('.mainCard-social a:nth-child(4)').hide();
+                        } 
+                        if(jQuery('#website-url').val() != ''){
+                            jQuery('.mainCard-cover').attr('href', jQuery('#website-url').val())                            
+                        }else{
+                            jQuery('.mainCard-social a:nth-child(5)').attr('href', "#")
+                        }
+                        if(jQuery('#addressName').val() != ''){
+                            jQuery('.location-marker').show();
+                            jQuery('.location-marker').attr('href', 'https://www.google.com/maps/place/'+jQuery('#addressName').val())
+                        }else{
+                            jQuery('.location-marker').hide();
+                        }
+                        setTimeout(function(){
+                            jQuery('.loader-parent-main, .container h2.center').hide();
+                            jQuery('.container').addClass('mainCard');
+                            jQuery('.step-form').removeClass('active');
+                            jQuery('.step-form-'+count).addClass('active');
+                        }, 5000)
+                    }
+                }
+                
+            })
+            jQuery('.input--field').on('focus', function(){
+                jQuery(this).parents('.input--field-box').addClass('focused');
+                jQuery(this).parents('.input--field-box').children('.error-box').remove();
+            })
+            jQuery('.input--field').on('blur', function(){
+                if(jQuery(this).attr('type') == 'tel'){
+                    var number = jQuery(this).val();
+                    var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+                    if (!filter.test(number)) {
+                        jQuery(this).parents('.input--field-box').append('<span class="error-box">Wrong number format.</span>')
+                    }
+                    else {
+                    }
+                }else if(jQuery(this).attr('type') == 'email'){
+                    var email = jQuery(this).val();
+                    var filter = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+                    if (!filter.test(email)) {
+                        jQuery(this).parents('.input--field-box').append('<span class="error-box">Wrong email format.</span>')
+                    }
+                    else {
+                    }
+                }
+                if(jQuery(this).val () == '' ){
+                    jQuery(this).parents('.input--field-box').children('.error-box').remove();
+                    jQuery(this).parents('.input--field-box').removeClass('focused');
+                    if(jQuery(this).hasClass('req')){
+                        jQuery(this).parents('.input--field-box').append('<span class="error-box">It is a mandatory field.</span>')
+                    }
+                }
+                
+            })            
+        })
+    </script>
+    <script>
+        // Get element references
+        var confirmBtn = document.getElementById('confirmPosition');
+        var onClickPositionView = document.getElementById('onClickPositionView');
+        var onIdlePositionView = document.getElementById('onIdlePositionView');
+        var addressNameView= document.getElementById('addressName');
+        var longiNameView= document.getElementById('longiName');
+        var latiNameView= document.getElementById('latiName');
+        var map = document.getElementById('map');
 
+        // Initialize LocationPicker plugin
+        var lp = new locationPicker(map, {
+            setCurrentPosition: true, // You can omit this, defaults to true
+            lat: 45.5017,
+            lng: -73.5673
+        }, {
+            zoom: 15 // You can set any google map options here, zoom defaults to 15
+        });
+
+        // Listen to button onclick event
+        confirmBtn.onclick = function () {
+            // Get current location and show it in HTML
+            var location = lp.getMarkerPosition();
+            onClickPositionView.innerHTML = 'The chosen location is ' + location.lat + ',' + location.lng;
+            addressNameView.innerHTML = location.lat + ',' + location.lng;
+            addressNameView.value = location.lat + ',' + location.lng;
+            longiNameView.value = location.lng;
+            latiNameView.value = location.lat;
+            document.getElementById('mapMain').style.display = 'none';
+        };
+
+        // Listen to map idle event, listening to idle event more accurate than listening to ondrag event
+        google.maps.event.addListener(lp.map, 'idle', function (event) {
+            // Get current location and show it in HTML
+            var location = lp.getMarkerPosition();
+            onIdlePositionView.innerHTML = 'The chosen location is ' + location.lat + ',' + location.lng;
+        });
+</script>
+</body>
 </html>
